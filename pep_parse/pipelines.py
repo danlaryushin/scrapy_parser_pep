@@ -19,7 +19,7 @@ class PepParsePipeline:
             raise DropItem('Drop item {item} from item_pipeline')
         return item
 
-    def close_spider(self, respomse):
+    def close_spider(self, spider):
         time = dt.now().strftime(DT_FORMAT)
         FILE_NAME = f'status_summary_{time}.csv'
         path = BASE_DIR / RESULTS_DIR / FILE_NAME
